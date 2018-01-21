@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        #map {
+                height: 100%;
+        }
+
+        html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+        }
+
+        img {
+            height: 100%;
+        }
+        </style>
+    </head>
+    <body>
+        <img id='tile'></img>
+        <div id="map">
+        </div>
+    </body>
+    <!-- <script src='./src/server.js'> -->
+    <script>
+    function initMap() {
+      var track = new google.maps.LatLng(45.5032226,-73.5288763);
+//      var url = 'https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDQZztcmGw_bAmGJDHz3TRJOXzu8aJ7-Os&zoom=18&size=640x640&scale=2&maptype=satellite&center=45.5032226,-73.5288763';
+      var url = 'https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDQZztcmGw_bAmGJDHz3TRJOXzu8aJ7-Os&zoom=18&size=640x640&scale=2&maptype=satellite&center=' + track.lat() + ',' + track.lng();
+      document.getElementById('tile').src = url;
+//      var map = new google.maps.Map(document.getElementById('map'), {
+//        center: track,
+//        zoom: 17
+//      });
+    }
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQZztcmGw_bAmGJDHz3TRJOXzu8aJ7-Os&callback=initMap">-->
+</html>

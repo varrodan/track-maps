@@ -1,0 +1,31 @@
+{
+  "name": "track-maps",
+  "version": "0.5.0",
+  "description": "Create a large map image from smaller map tiles",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "test": "npm run unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varrodan/track-maps.git"
+  },
+  "keywords": [
+    "maps",
+    "tile"
+  ],
+  "author": "Daniel Varro <daniel.varro@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varrodan/track-maps/issues"
+  },
+  "homepage": "https://github.com/varrodan/track-maps#readme",
+  "dependencies": {
+    "googlemaps": "^1.12.0",
+    "https": "^1.0.0",
+    "jimp": "^0.2.28",
+    "q": "^1.5.1",
+    "sphericalmercator": "^1.0.5"
+  }
+}
